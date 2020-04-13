@@ -6,15 +6,15 @@
 favicon: images/favicon.ico
 
 # Set default keywords (Use a comma to separate)
-keywords: "Hexo, NexT"
+keywords: "web,mrgo,Hexo, NexT"  #seo网站关键词，有利于SEO优化
 
 # Set rss to false to disable feed link.
 # Leave rss as empty to use site's feed link.
 # Set rss to specific value if you have burned your feed already.
-rss:
+rss:  #/atom.xml
 
 # Specify the date when the site was setup
-#since: 2015
+since: 2017 #建立网站时间
 
 # icon between year and author @Footer
 authoricon: heart
@@ -51,6 +51,8 @@ menu:
   about: /about/
   archives: /archives/
   tags: /tags/
+  resume: https://guodaxia63.coding.me/
+  #https://guodaxia63.coding.me
 
   # sitemap: /sitemap.xml/
 
@@ -70,6 +72,7 @@ menu_icons:
   categories: th
   schedule: calendar
   tags: tags
+  resume: heartbeat
   archives: archive
   sitemap: sitemap
   commonweal: heartbeat
@@ -82,7 +85,7 @@ menu_icons:
 # Schemes
 # scheme: Muse
 # scheme: Mist
-# scheme: Pisces
+#scheme: Pisces
 scheme: Gemini
 
 
@@ -123,11 +126,14 @@ social_icons:
   Weibo: weibo
 
 # Blog rolls
-#links_title: Links
+links_title: 友情链接
 #links_layout: block
 #links_layout: inline
-#links:
-  #Title: http://example.com/
+links:
+  阮一峰的博客: http://www.ruanyifeng.com/blog/
+  廖雪峰的博客: https://www.liaoxuefeng.com/
+  F2EX前端开发资源库: http://f2ex.cn/
+  # JackBob: http://zhaorubo.top/
 
 # Sidebar Avatar
 # in theme directory(source/images): /images/avatar.jpg
@@ -172,7 +178,7 @@ sidebar:
   # Back to top in sidebar
   b2t: false
 
-  # Scroll percent label in b2t button
+  # Scroll percent label in b2t button滚动进度百分比
   scrollpercent: false
 
   # Enable sidebar on narrow view
@@ -184,7 +190,11 @@ sidebar:
 # ---------------------------------------------------------------
 
 # Automatically scroll page to section which is under <!-- more --> mark.
+# `阅读全文` 按钮跳转之后是否自动滚动页面到设置 `<!-- more -->` 的地方
 scroll_to_more: true
+
+# 是否为侧边栏文章的目录自动添加索引，默认开启。设置为 `false` 关闭。
+toc_list_number: true
 
 # Automatically saving scroll position on each post/page in cookies.
 save_scroll: false
@@ -209,8 +219,8 @@ post_meta:
 # Dependencies: https://github.com/willin/hexo-wordcount
 post_wordcount:
   item_text: true
-  wordcount: false
-  min2read: false
+  wordcount: true
+  min2read: true
   separated_meta: true
 
 # Wechat Subscriber
@@ -344,11 +354,11 @@ changyan:
 
 # Support for youyan comments system.
 # You can get your uid from http://www.uyan.cc
-youyan_uid: 2157651
+# youyan_uid: 2157651
 
 # Support for LiveRe comments system.
 # You can get your uid from https://livere.com/insight/myCode (General web site)
-#livere_uid: your uid
+livere_uid: MTAyMC8zNDM4Ni8xMDkyMw==
 
 # Baidu Share
 # Available value:
@@ -358,7 +368,7 @@ youyan_uid: 2157651
 ##  type: button
 
 # Share
-#jiathis:
+jiathis: true
 # Warning: JiaThis does not support https.
 #add_this_id:
 
@@ -377,7 +387,7 @@ youyan_uid: 2157651
 #yandex_site_verification:
 
 # CNZZ count
-#cnzz_siteid:
+#cnzz_siteid: # CNZZ站长统计功能，开启服务后将siteid添加在此处
 
 # Application Insights
 # See https://azure.microsoft.com/en-us/services/application-insights/
@@ -387,7 +397,7 @@ youyan_uid: 2157651
 # user_id must NOT be null when admin_enable is true!
 # you can visit http://dev.duoshuo.com get duoshuo user id.
 duoshuo_info:
-  ua_enable: true
+  ua_enable: false
   admin_enable: false
   user_id: 0
   #admin_nickname: Author
@@ -439,17 +449,17 @@ leancloud_visitors:
 # Get more information on http://ibruce.info/2015/04/04/busuanzi/
 busuanzi_count:
   # count values only if the other configs are false
-  enable: false
+  enable: true
   # custom uv span for the whole site
-  site_uv: true
+  site_uv: false
   site_uv_header: <i class="fa fa-user"></i>
   site_uv_footer:
   # custom pv span for the whole site
-  site_pv: true
+  site_pv: false
   site_pv_header: <i class="fa fa-eye"></i>
   site_pv_footer:
   # custom pv span for one page only
-  page_pv: true
+  page_pv: false
   page_pv_header: <i class="fa fa-file-o"></i>
   page_pv_footer:
 
@@ -462,7 +472,8 @@ busuanzi_count:
 
 
 # Enable baidu push so that the blog will push the url to baidu automatically which is very helpful for SEO
-baidu_push: false
+# 百度推送
+baidu_push: true
 
 # Google Calendar
 # Share your recent schedule to others via calendar page
@@ -494,7 +505,7 @@ algolia_search:
 # Local search
 # Dependencies: https://github.com/flashlab/hexo-generator-search
 local_search:
-  enable: false
+  enable: true
   # if auto, trigger search by changing input
   # if manual, trigger search by pressing enter key or search button
   trigger: auto
@@ -530,7 +541,7 @@ label: true
 
 # Tabs tag.
 tabs:
-  enable: true
+  enable: false
   transition:
     tabs: false
     labels: true
@@ -582,7 +593,7 @@ canvas_sphere: false
 
 # Only fit scheme Pisces
 # Canvas-ribbon
-canvas_ribbon: false
+canvas_ribbon: true
 
 # Script Vendors.
 # Set a CDN address for the vendor you want to customize.
@@ -675,6 +686,48 @@ images: images
 # 文章末尾添加“本文结束”标记
 passage_end_tag:
   enabled: true
+
+# hexo-neat压缩
+
+neat_enable: true
+
+neat_html:
+  enable: true
+  exclude:
+
+neat_css:
+  enable: true
+  exclude:
+    - '*.min.css'
+
+neat_js:
+  enable: true
+  mangle: true
+  output:
+  compress:
+  exclude:
+    - '*.min.js'
+
+
+# #页面宠物
+# live2d:
+#   model: nico
+#   bottom: -30
+
+# Online contact  在线聊天
+daovoice: true
+daovoice_app_id: de3fc3c4
+
+#tagcloud是否开启云标签
+tagcloud: true
+
+#开启微信赞赏
+# Wechat Subscriber
+wechat_subscriber:
+  enabled: true
+  qcode:  /uploads/wechat-qcode.jpg
+  #http://okwl1c157.bkt.clouddn.com/wechat-qcode.jpg # 这里添加个人打赏链接
+  description:  欢迎您扫一扫上面的微信公众号，订阅我的博客！ #坚持原创技术分享，您的支持将鼓励我继续创作！
 
 # Theme version
 version: 5.1.2

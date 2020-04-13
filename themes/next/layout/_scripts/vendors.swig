@@ -35,7 +35,7 @@
   {% set js_vendors.canvas_sphere  = 'three/canvas_sphere.min.js' %}
 {% endif %}
 
-{% if theme.canvas_ribbon and theme.scheme === 'Pisces'%}
+{% if theme.canvas_ribbon and theme.scheme === 'Gemini'%}
   {% set js_vendors.canvas_ribbon  = 'canvas-ribbon/canvas-ribbon.js' %}
 {% endif %}
 

@@ -74,6 +74,10 @@
               </time>
             {% endif %}
 
+            {% if not is_index %}
+              <span id="busuanzi_container_page_pv">&nbsp;&nbsp;|&nbsp;&nbsp;阅读量 <span id="busuanzi_value_page_pv"></span> 次</span>
+            {% endif %}
+
             {% if theme.post_meta.created_at and theme.post_meta.updated_at %}
               <span class="post-meta-divider">|</span>
             {% endif %}
@@ -272,6 +276,13 @@
       {% endif %}
 
       {% if is_index %}
+<!--自定义图片封面-->
+      {% if post.summary_img  %}
+      <div class="out-img-topic">
+      <img src={{ post.summary_img }} class="img-topic">
+      </div>
+        {% endif %}
+
         {% if post.description and theme.excerpt_description %}
           {{ post.description }}
           <!--noindex-->
@@ -320,6 +331,12 @@
           {% include 'passage-end-tag.swig' %}
   	         {% endif %}
     </div>
+
+    <div>
+      {% if not is_index %}
+        {% include 'my-copyright.swig' %}
+      {% endif %}
+      </div>
 
     {% if theme.wechat_subscriber.enabled and not is_index %}
       <div>
